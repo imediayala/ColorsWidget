@@ -47,16 +47,6 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>indigo</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>QC8n5m</string>
-					<key>INEnumValueIndex</key>
-					<integer>3</integer>
-					<key>INEnumValueName</key>
-					<string>indigo</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
 					<string>lavender</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BAZaFC</string>
@@ -77,16 +67,6 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>navy</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>TEYPQp</string>
-					<key>INEnumValueIndex</key>
-					<integer>6</integer>
-					<key>INEnumValueName</key>
-					<string>navy</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
 					<string>orange</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>8fLnUl</string>
@@ -94,16 +74,6 @@
 					<integer>7</integer>
 					<key>INEnumValueName</key>
 					<string>orange</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>oxblood</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>poLnwz</string>
-					<key>INEnumValueIndex</key>
-					<integer>8</integer>
-					<key>INEnumValueName</key>
-					<string>oxblood</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
@@ -124,16 +94,6 @@
 					<integer>10</integer>
 					<key>INEnumValueName</key>
 					<string>poppy</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>purple</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>1v4KKo</string>
-					<key>INEnumValueIndex</key>
-					<integer>11</integer>
-					<key>INEnumValueName</key>
-					<string>purple</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
@@ -177,13 +137,13 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>yellow</string>
+					<string>show all</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>wWXnJ5</string>
+					<string>cfley8</string>
 					<key>INEnumValueIndex</key>
-					<integer>16</integer>
+					<integer>17</integer>
 					<key>INEnumValueName</key>
-					<string>yellow</string>
+					<string>showAll</string>
 				</dict>
 			</array>
 		</dict>
@@ -195,9 +155,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>21C52</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>13C90</string>
+	<string>13C100</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>13.2</string>
+	<string>13.2.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>

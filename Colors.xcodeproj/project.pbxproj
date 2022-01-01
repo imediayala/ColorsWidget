@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C455EB66277B03F100659E5E /* ColorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455EB63277B025400659E5E /* ColorsModel.swift */; };
+		C4822F0B277D9FA500CEECE7 /* ColorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455EB63277B025400659E5E /* ColorsModel.swift */; };
+		C4822F0C277D9FAE00CEECE7 /* ColorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455EB63277B025400659E5E /* ColorsModel.swift */; };
 		C4EE890D2779B56600319B9D /* ColorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE890C2779B56600319B9D /* ColorsApp.swift */; };
 		C4EE890F2779B56600319B9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE890E2779B56600319B9D /* ContentView.swift */; };
 		C4EE89112779B56700319B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EE89102779B56700319B9D /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 				C455EB65277B02BB00659E5E /* Info.plist */,
 				C4EE890C2779B56600319B9D /* ColorsApp.swift */,
 				C4EE890E2779B56600319B9D /* ContentView.swift */,
+				C455EB63277B025400659E5E /* ColorsModel.swift */,
 				C4EE89102779B56700319B9D /* Assets.xcassets */,
 				C4EE89122779B56700319B9D /* Preview Content */,
 			);
@@ -137,7 +139,6 @@
 				C4EE89272779B5A900319B9D /* ColorsWidget.intentdefinition */,
 				C4EE89282779B5AA00319B9D /* Assets.xcassets */,
 				C4EE892A2779B5AA00319B9D /* Info.plist */,
-				C455EB63277B025400659E5E /* ColorsModel.swift */,
 			);
 			path = ColorsWidget;
 			sourceTree = "<group>";
@@ -246,6 +247,7 @@
 				C4EE890F2779B56600319B9D /* ContentView.swift in Sources */,
 				C4EE890D2779B56600319B9D /* ColorsApp.swift in Sources */,
 				C4EE892C2779B5AA00319B9D /* ColorsWidget.intentdefinition in Sources */,
+				C4822F0B277D9FA500CEECE7 /* ColorsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4EE892B2779B5AA00319B9D /* ColorsWidget.intentdefinition in Sources */,
-				C455EB66277B03F100659E5E /* ColorsModel.swift in Sources */,
+				C4822F0C277D9FAE00CEECE7 /* ColorsModel.swift in Sources */,
 				C4EE89262779B5A900319B9D /* ColorsWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

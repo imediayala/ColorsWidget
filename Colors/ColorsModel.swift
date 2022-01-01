@@ -10,25 +10,19 @@ import SwiftUI
 enum ColorsModel: String, CaseIterable, Identifiable {
     case bubblegum
     case buttercup
-    case indigo
     case lavender
     case magenta
-    case navy
     case orange
-    case oxblood
     case periwinkle
     case poppy
-    case purple
     case seafoam
     case sky
     case tan
     case teal
-    case yellow
     
     var accentColor: Color {
         switch self {
-        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-        case .indigo, .magenta, .navy, .oxblood, .purple: return .white
+        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .magenta: return .black
         }
     }
     var mainColor: Color {
@@ -39,5 +33,9 @@ enum ColorsModel: String, CaseIterable, Identifiable {
     }
     var id: String {
         name
+    }
+    
+    var url: URL {
+        URL(string: "game:///\(rawValue)")!
     }
 }

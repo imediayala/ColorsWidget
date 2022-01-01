@@ -13,23 +13,28 @@ struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent(), color: .bubblegum)
     }
-
+    
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), configuration: configuration, color: .bubblegum)
         completion(entry)
     }
-
+    
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration, color: selectedColor(configuration: configuration))
+        let colorsList: [ColorsModel]
+        colorsList = ColorsModel.allCases
+        
+        if configuration.Colors == .showAll {
+            for (index, color) in colorsList.enumerated() {
+                let entryDate = Calendar.current.date(byAdding: .second, value: index, to: currentDate)!
+                entries.append(SimpleEntry(date: entryDate, configuration: configuration, color: color))
+            }
+        }else {
+            let entry = SimpleEntry(date: currentDate, configuration: configuration, color: selectedColor(configuration: configuration))
             entries.append(entry)
         }
-
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -38,20 +43,15 @@ struct Provider: IntentTimelineProvider {
         switch configuration.Colors {
         case .bubblegum: return .bubblegum
         case .buttercup: return .buttercup
-        case .indigo: return .indigo
         case .lavender: return .lavender
         case .magenta: return .magenta
-        case .navy: return .navy
         case .orange: return .orange
-        case .oxblood: return .oxblood
         case .periwinkle: return .periwinkle
         case .poppy: return .poppy
-        case .purple: return .purple
         case .seafoam: return .seafoam
         case .sky: return .seafoam
         case .tan: return .tan
         case .teal: return .teal
-        case .yellow: return .yellow
         default: return .bubblegum
         }
     }
@@ -66,7 +66,7 @@ struct SimpleEntry: TimelineEntry {
 struct ColorsWidgetEntryView : View {
     @Environment(\.colorScheme) var colorScheme
     var entry: Provider.Entry
-
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -74,8 +74,11 @@ struct ColorsWidgetEntryView : View {
             VStack {
                 Text("\(entry.color.name)")
                     .foregroundColor(colorScheme == .dark ? .white : .black)
+                    .bold()
                 Text(colorScheme == .dark ? "In dark mode" : "In light mode")
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
             }
+            .widgetURL(entry.color.url)
         }
     }
 }
@@ -83,13 +86,13 @@ struct ColorsWidgetEntryView : View {
 @main
 struct ColorsWidget: Widget {
     let kind: String = "ColorsWidget"
-
+    
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             ColorsWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Colors")
+        .description("This is a fancy Widget color selector.")
     }
 }
 
