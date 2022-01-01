@@ -45,7 +45,6 @@ struct Provider: IntentTimelineProvider {
         case .buttercup: return .buttercup
         case .lavender: return .lavender
         case .magenta: return .magenta
-        case .orange: return .orange
         case .periwinkle: return .periwinkle
         case .poppy: return .poppy
         case .seafoam: return .seafoam

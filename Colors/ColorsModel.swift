@@ -12,7 +12,6 @@ enum ColorsModel: String, CaseIterable, Identifiable {
     case buttercup
     case lavender
     case magenta
-    case orange
     case periwinkle
     case poppy
     case seafoam
@@ -22,7 +21,7 @@ enum ColorsModel: String, CaseIterable, Identifiable {
     
     var accentColor: Color {
         switch self {
-        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .magenta: return .black
+        case .bubblegum, .buttercup, .lavender, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .magenta: return .black
         }
     }
     var mainColor: Color {
